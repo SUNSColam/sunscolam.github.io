@@ -17,7 +17,7 @@ gulp.task('nunjucks', function() {
 });
 
 gulp.task('img', function() {
-    return gulp.src('static/img/*')
+    return gulp.src('static/img/**/*')
         .pipe(imagemin())
         .pipe(gulp.dest('../docs/img'))
 })
