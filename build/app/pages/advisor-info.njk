@@ -1,0 +1,79 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+    {% import "partials/nav.njk" as nav %}
+    {{nav.navigation(false)}}
+
+    <main id="main" class="main-page">
+
+        <!--========================== Speaker Details Section ============================-->
+        <section id="speakers" class="wow">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Delegate and Advisor information</h2>
+                </div>
+            </div>
+
+            <div class="container">
+                <h2>
+                    <b>Dress Code</b>
+                </h2>
+                <h2>Men</h2>
+                <ul>
+                    <li>Must wear a suit or jacket and dress trousers (no jeans), with a dress suit and tie.</li>
+                    <li>Dress shoes must be worn. No hats or caps will be allowed.</li>
+                </ul>
+
+                <h2>Women</h2>
+                <ul>
+                    <li>Must wear formal pants and blouse or sweater. No skirts nor dresses will be allowed.</li>
+                    <li>Make-up must be discrete.</li>
+                    <li>Dress shoes must be worn.</li>
+                    <li>Please avoid provocative dressing.</li>
+                </ul>
+            </div>
+
+            <br>
+
+            <div class="container">
+                <h2>
+                    <b>Accomodations</b>
+                </h2>
+                <h2>Housing</h2>
+                <p>We are glad to inform that we will be offering housing, for schools that request it.</p>
+                <p>Please contact
+                    <u>suns@colam.edu.mx</u>
+                    with the amount of delegates needing housing. We are glad to set this up for you.
+                </p>
+
+                <div id="hotels">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="hotel">
+                                <div class="hotel-img">
+                                    <!-- <img src="img/hotels/2.jpg" alt="Hotel 2" class="img-fluid" /> -->
+                                </div>
+                                <h3>QUINTA DORADA</h3>
+                                <p>Blvd. Luis Echeverria 1416 Col. Guanajuato Ote. C.P. 25280 Saltillo, Coah. Mexico</p>
+                                <p>www.quintadorada.com.mx</p>
+                                <p>(844) 450 5050</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="hotel">
+                                <div class="hotel-img">
+                                    <!-- <img src="img/hotels/2.jpg" alt="Hotel 2" class="img-fluid" /> -->
+                                </div>
+                                <h3>QUINTA DORADA</h3>
+                                <p>Blvd. Luis Echeverria 1416 Col. Guanajuato Ote. C.P. 25280 Saltillo, Coah. Mexico</p>
+                                <p>www.quintadorada.com.mx</p>
+                                <p>(844) 450 5050</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+        </main>
+    {% endblock content %}

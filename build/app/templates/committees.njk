@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>SUNS Colam 2019</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+        <meta content="" name="keywords"/>
+        <meta content="" name="description"/>
+
+        <!-- Favicons -->
+        <!-- <link href="img/favicon.png" rel="icon" /> <link href="img/apple-touch-icon.png" rel="apple-touch-icon" /> -->
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet"/>
+
+        <!-- Bootstrap CSS File -->
+        <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+
+        <!-- Libraries CSS Files -->
+        <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
+
+        <!-- Main Stylesheet File -->
+        <link href="css/style.css" rel="stylesheet"/>
+
+        <!-- ======================================================= Theme Name: TheEvent Theme URL: https://bootstrapmade.com/theevent-conference-event-bootstrap-template/ Author: BootstrapMade.com License: https://bootstrapmade.com/license/ ======================================================= -->
+    </head>
+
+    <body>
+
+        {% import "partials/nav.njk" as nav %}
+        {{nav.navigation(false, sub=true)}}
+
+        <main id="main" class="main-page">
+            <!--========================== Speaker Details Section ============================-->
+            <section id="speakers-details" class="wow fadeIn">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>
+                            {% block committeename %}{% endblock committeename %}
+                        </h2>
+                    </div>
+
+                    <div class="container-fluid">
+                        <div class="details">
+                            <div class="">
+                                <div class="clearfix content-heading">
+                                    <img class="pull-left mr-5 img-fluid directors" src="../img/{% block img %}{% endblock img %}"/>
+                                    <!-- 365 x 548 -->
+                                    <p>Moderator:
+                                        <b>
+                                            {% block moderator %}{% endblock moderator %}
+                                        </b>
+                                    </p>
+                                    <p>Director:
+                                        <b>
+                                            {% block director %}{% endblock director %}
+                                        </b>
+                                    </p>
+
+                                    <br>
+
+                                    <div style="margin-bottom: 20px">
+                                        <h5>Topic A:
+                                            <b>
+                                                {% block topica %}{% endblock topica %}
+                                            </b>
+                                        </h5>
+                                        <a class="btn-info" href="{% block topicaurl %}{% endblock topicaurl %}" role="button" style="margin-bottom: 50px">Background paper</a >
+                                    </div>
+
+                                    <div>
+                                        <h5>
+                                            Topic B:
+                                            <b >
+                                                {% block topicb %}{% endblock topicb %}
+                                            </b >
+                                        </h5>
+                                        <a class="btn-info" href="{% block topicburl %}{% endblock topicburl %}" role="button" style="">Background paper</a >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        {% include "partials/footer.njk" %}
+
+        <a href="#" class="back-to-top">
+            <i class="fa fa-angle-up"></i>
+        </a>
+
+        <!-- JavaScript Libraries -->
+        <script src="lib/jquery/jquery.min.js"></script>
+        <script src="lib/jquery/jquery-migrate.min.js"></script>
+        <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/superfish/superfish.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/venobox/venobox.min.js"></script>
+
+        <!-- Template Main Javascript File -->
+        <script src="js/main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "build",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^6.1.0",
+    "gulp-nunjucks-render": "^2.2.3"
+  },
+  "scripts": {
+    "build": "gulp nunjucks",
+    "img": "gulp img"
+  }
+}

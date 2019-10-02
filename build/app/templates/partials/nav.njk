@@ -1,0 +1,42 @@
+{% macro navigation(index, sub = false) %}
+  <header id="header" style="{{'' if index == true else 'background-color: #173163'}}">
+    <div class="container">
+      <div id="logo" class="pull-left">
+        <!-- Uncomment below if you prefer to use a text logo -->
+        <!-- <h1><a href="#main">C<span>o</span>nf</a></h1>-->
+        <a href="{{'../' if sub else ''}}index.html#intro" class="scrollto"><img src="https://2018suns.files.wordpress.com/2018/09/cropped-suns-2018.png?w=240" alt="" title="" height="50px"/></a>
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li>
+            <a href="{{'../' if sub else ''}}index.html#intro">Home</a>
+          </li>
+          <li>
+            <a href="{{'../' if sub else ''}}index.html#about">About</a>
+          </li>
+          <li>
+            <a href="{{'../' if sub else ''}}committees.html">Committees</a>
+          </li>
+          <li>
+            <a href="{{'../' if sub else ''}}index.html#schedule">Schedule</a>
+          </li>
+          <li>
+            <a href="{{'../' if sub else ''}}advisor-info.html">Delegate and Advisor information</a>
+          </li>
+          {# <li>
+            <a href="{{'../' if sub else ''}}index.html#gallery">Gallery</a>
+          </li>
+          <li>
+            <a href="{{'../' if sub else ''}}index.html#supporters">Sponsors</a>
+          </li> #}
+          <li>
+            <a href="{{'../' if sub else ''}}index.html#contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- #nav-menu-container -->
+    </div>
+  </header>
+  <!-- #header -->
+{% endmacro %}
