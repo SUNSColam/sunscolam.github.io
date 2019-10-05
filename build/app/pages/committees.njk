@@ -1,5 +1,20 @@
 {% extends "layout.njk" %}
 
+{% macro card(title, url, img) %}
+<div class="col-lg-4 col-md-6">
+    <a href="./committee/{{url}}.html">
+        <div class="speaker">
+            <img src="./img/com-logos/{{img}}.jpg" alt="Speaker 1" class="img-fluid img-committees"/>
+            <div class="details">
+                <h3>
+                    <a href="./committee/{{url}}.html">{{title}}</a>
+                </h3>
+            </div>
+        </div>
+    </a >
+</div>
+{% endmacro %}
+
 {% block content %}
     {% import "partials/nav.njk" as nav %}
     {{nav.navigation(false)}}
@@ -12,7 +27,9 @@
                     <h2>Committees</h2>
                 </div>
 
-                <div class="container text-center">
+                {# TODO: Search bar #}
+
+                {# <div class="container text-center">
                     <div class="p-1 bg-light rounded rounded-pill shadow-sm mb-4">
                         <div class="input-group">
                             <input type="search" placeholder="Search your committee" aria-describedby="button-addon1" class="form-control border-0 bg-light">
@@ -23,153 +40,33 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> #}
 
                 <div class="row">
-                    <div class="col-lg-4 col-md-6">
-                        <a href="">
-                            <div class="speaker">
-                                <img src="https://d2v9ipibika81v.cloudfront.net/uploads/sites/75/2016/02/UN-1140x684.jpg" alt="Speaker 1" class="img-fluid img-committees"/>
-                                <div class="details">
-                                    <h3>
-                                        <a href="speaker-details.html">Committee 1</a>
-                                    </h3>
-                                </div>
-                            </div>
-                        </a >
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <a href="">
-                            <div class="speaker">
-                                <img src="https://media.globalcitizen.org/fa/ff/faff3c3a-3d50-4ff3-af06-35319106cdd5/un-women-new-logo.jpg" alt="Speaker 1" class="img-fluid img-committees"/>
-                                <div class="details">
-                                    <h3>
-                                        <a href="speaker-details.html">Committee 2</a>
-                                    </h3>
-                                </div>
-                            </div>
-                        </a >
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <a href="">
-                            <div class="speaker">
-                                <img src="https://www.eurodyn.com/wp-content/uploads/2018/10/01-The-Council-of-the-European-Union.jpg" alt="Speaker 1" class="img-fluid img-committees"/>
-                                <div class="details">
-                                    <h3>
-                                        <a href="speaker-details.html">Committee 3</a>
-                                    </h3>
-                                </div>
-                            </div>
-                        </a >
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <a href="">
-                            <div class="speaker">
-                                <img src="https://d2v9ipibika81v.cloudfront.net/uploads/sites/75/2016/02/UN-1140x684.jpg" alt="Speaker 1" class="img-fluid img-committees"/>
-                                <div class="details">
-                                    <h3>
-                                        <a href="speaker-details.html">Committee 1</a>
-                                    </h3>
-                                </div>
-                            </div>
-                        </a >
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <a href="">
-                            <div class="speaker">
-                                <img src="https://media.globalcitizen.org/fa/ff/faff3c3a-3d50-4ff3-af06-35319106cdd5/un-women-new-logo.jpg" alt="Speaker 1" class="img-fluid img-committees"/>
-                                <div class="details">
-                                    <h3>
-                                        <a href="speaker-details.html">Committee 2</a>
-                                    </h3>
-                                </div>
-                            </div>
-                        </a >
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <a href="">
-                            <div class="speaker">
-                                <img src="https://www.eurodyn.com/wp-content/uploads/2018/10/01-The-Council-of-the-European-Union.jpg" alt="Speaker 1" class="img-fluid img-committees"/>
-                                <div class="details">
-                                    <h3>
-                                        <a href="speaker-details.html">Committee 3</a>
-                                    </h3>
-                                </div>
-                            </div>
-                        </a >
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <a href="">
-                            <div class="speaker">
-                                <img src="https://d2v9ipibika81v.cloudfront.net/uploads/sites/75/2016/02/UN-1140x684.jpg" alt="Speaker 1" class="img-fluid img-committees"/>
-                                <div class="details">
-                                    <h3>
-                                        <a href="speaker-details.html">Committee 1</a>
-                                    </h3>
-                                </div>
-                            </div>
-                        </a >
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <a href="">
-                            <div class="speaker">
-                                <img src="https://media.globalcitizen.org/fa/ff/faff3c3a-3d50-4ff3-af06-35319106cdd5/un-women-new-logo.jpg" alt="Speaker 1" class="img-fluid img-committees"/>
-                                <div class="details">
-                                    <h3>
-                                        <a href="speaker-details.html">Committee 2</a>
-                                    </h3>
-                                </div>
-                            </div>
-                        </a >
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <a href="">
-                            <div class="speaker">
-                                <img src="https://www.eurodyn.com/wp-content/uploads/2018/10/01-The-Council-of-the-European-Union.jpg" alt="Speaker 1" class="img-fluid img-committees"/>
-                                <div class="details">
-                                    <h3>
-                                        <a href="speaker-details.html">Committee 3</a>
-                                    </h3>
-                                </div>
-                            </div>
-                        </a >
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <a href="">
-                            <div class="speaker">
-                                <img src="https://d2v9ipibika81v.cloudfront.net/uploads/sites/75/2016/02/UN-1140x684.jpg" alt="Speaker 1" class="img-fluid img-committees"/>
-                                <div class="details">
-                                    <h3>
-                                        <a href="speaker-details.html">Committee 1</a>
-                                    </h3>
-                                </div>
-                            </div>
-                        </a >
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <a href="">
-                            <div class="speaker">
-                                <img src="https://media.globalcitizen.org/fa/ff/faff3c3a-3d50-4ff3-af06-35319106cdd5/un-women-new-logo.jpg" alt="Speaker 1" class="img-fluid img-committees"/>
-                                <div class="details">
-                                    <h3>
-                                        <a href="speaker-details.html">Committee 2</a>
-                                    </h3>
-                                </div>
-                            </div>
-                        </a >
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <a href="">
-                            <div class="speaker">
-                                <img src="https://www.eurodyn.com/wp-content/uploads/2018/10/01-The-Council-of-the-European-Union.jpg" alt="Speaker 1" class="img-fluid img-committees"/>
-                                <div class="details">
-                                    <h3>
-                                        <a href="speaker-details.html">Committee 3</a>
-                                    </h3>
-                                </div>
-                            </div>
-                        </a >
-                    </div>
+                    {{ card('General Assembly (HS)', 'general-assembly-hs', 'ga') }}
+                    {{ card('General Assembly (MS)', 'general-assembly-ms', 'ga') }}
+                    {{ card('Security Council (HS)', 'security-council-hs', 'sc') }}
+                    {{ card('Security Council (MS)', 'security-council-ms', 'sc') }}
+                    {{ card('UNICEF (HS)', 'unicef-hs', 'unicef') }}
+                    {{ card('UNICEF (MS)', 'unicef-ms', 'unicef') }}
+                    {{ card('WHO (HS)', 'who-hs', 'who') }}
+                    {{ card('WHO (MS)', 'who-ms', 'who') }}
+                    {{ card('UN Women (HS)', 'un-women-hs', 'un-women') }}
+                    {{ card('UN Women (MS)', 'un-women-ms', 'un-women') }}
+                    {{ card('OHCHR (HS)', 'ohchr-hs', 'ohchr') }}
+                    {{ card('OHCHR (MS)', 'ohchr-ms', 'ohchr') }}
+                    {{ card('Arab League', 'arab-league', 'al') }}
+                    {{ card('European Council', 'european-council', 'ec') }}
+                    {{ card('ECOSOC', 'ecosoc', 'ecosoc') }}
+                    {{ card('UNHCR', 'unhcr', 'unhcr') }}
+                    {{ card('UNDP', 'undp', 'undp') }}
+                    {{ card('UNEA', 'unea', 'unea') }}
+                    {{ card('Mexican Cabinet', 'mexican-cabinet', 'mc') }}
+                    {{ card('US Congress', 'us-congress', 'usc') }}
+                    {{ card('CCPCJ', 'ccpcj', 'ccpcj') }}
+                    {{ card('UNESCO', 'unesco', 'unesco') }}
+                    {{ card('OAS', 'oas', 'oas') }}
+                    {{ card('UNODC', 'unodc', 'unodc') }}
                 </div>
             </div>
         </section>
