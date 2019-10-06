@@ -1030,6 +1030,29 @@
         <!-- /.modal -->
       </section> #}
 
+      {% macro person(name, position, img) %}
+      <div class="col-lg-4 col-md-6">
+        <div class="speaker">
+          <img src="{{img}}" alt="Speaker 1" class="img-fluid img-committees"/>
+          <div class="details" style="background: rgba(44, 65, 136, 0.85)">
+              <h3>
+                  {{name}}
+              </h3>
+              <p>{{position}}</p>
+          </div>
+        </div>
+      </div>
+      {% endmacro %}
+
+      {# <section id="speakers" class="wow">
+        <div class="container">
+          <div class="row">
+            {{ person("Diego Flores", "Secretary", "http://placeimg.com/350/200/people") }}
+          </div>
+        </div>
+      </section> #}
+      
+
     <!--========================== Contact Section ============================-->
     <section id="contact" class="section-bg wow fadeInUp">
       <div class="container">
