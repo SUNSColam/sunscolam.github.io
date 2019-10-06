@@ -1,7 +1,7 @@
 {% extends "layout.njk" %}
 
 {% macro card(title, url, img) %}
-<div class="col-lg-4 col-md-6">
+<div class="col-lg-4 col-md-6 committee">
     <a href="./committee/{{url}}.html">
         <div class="speaker">
             <img src="./img/com-logos/{{img}}.jpg" alt="Speaker 1" class="img-fluid img-committees"/>
@@ -29,18 +29,13 @@
 
                 {# TODO: Search bar #}
 
-                {# <div class="container text-center">
+                <div class="container text-center">
                     <div class="p-1 bg-light rounded rounded-pill shadow-sm mb-4">
                         <div class="input-group">
-                            <input type="search" placeholder="Search your committee" aria-describedby="button-addon1" class="form-control border-0 bg-light">
-                            <div class="input-group-append">
-                                <button id="button-addon1" type="submit" class="btn btn-link text-primary">
-                                    <i class="fa fa-search"></i>
-                                </button>
-                            </div>
+                            <input type="search" placeholder="Search your committee" aria-describedby="button-addon1" class="form-control border-0 bg-light" id="searchbar">
                         </div>
                     </div>
-                </div> #}
+                </div>
 
                 <div class="row">
                     {{ card('General Assembly (HS)', 'general-assembly-hs', 'ga') }}
@@ -73,3 +68,7 @@
 
     </main>
 {% endblock content %}
+
+{% block js %}
+<script src="js/search.js"></script>
+{% endblock %}
