@@ -1,7 +1,8 @@
 const gulp = require('gulp')
 const nunjucksRender = require('gulp-nunjucks-render');
-const imagemin = require('gulp-imagemin');
 const htmlmin = require('gulp-htmlmin');
+var surge = require('gulp-surge')
+
 
 
 gulp.task('nunjucks', function() {
@@ -16,8 +17,9 @@ gulp.task('nunjucks', function() {
     .pipe(gulp.dest('../docs'))
 });
 
-// gulp.task('img', function() {
-//     return gulp.src('static/img/**/*')
-//         .pipe(imagemin())
-//         .pipe(gulp.dest('../docs/img'))
-// })
+gulp.task('deploy', [], function () {
+    return surge({
+      project: '../docs',         // Path to your static build directory
+      domain: 'sunscolam.surge.sh'  // Your domain or Surge subdomain
+    })
+  })
