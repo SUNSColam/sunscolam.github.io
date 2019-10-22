@@ -17,9 +17,9 @@ gulp.task('nunjucks', function() {
     .pipe(gulp.dest('../docs'))
 });
 
-gulp.task('deploy', [], function () {
-    return surge({
-      project: '../docs',         // Path to your static build directory
-      domain: 'sunscolam.surge.sh'  // Your domain or Surge subdomain
-    })
-  })
+gulp.task('deploy', function () {
+  return surge({
+    project: '../docs',         // Path to your static build directory
+    domain: 'sunscolam.surge.sh'  // Your domain or Surge subdomain
+  });
+});
