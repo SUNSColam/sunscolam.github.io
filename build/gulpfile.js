@@ -14,12 +14,12 @@ gulp.task('nunjucks', function() {
     }))
     .pipe(htmlmin({ collapseWhitespace: true }))
     // output files in app folder
-    .pipe(gulp.dest('../docs'))
+    .pipe(gulp.dest('../'))
 });
 
-gulp.task('deploy', function () {
-  return surge({
-    project: '../docs',         // Path to your static build directory
-    domain: 'sunscolam.surge.sh'  // Your domain or Surge subdomain
-  });
-});
+// gulp.task('deploy', function () {
+//   return surge({
+//     project: '../docs',         // Path to your static build directory
+//     domain: 'sunscolam.surge.sh'  // Your domain or Surge subdomain
+//   });
+// });
